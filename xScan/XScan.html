@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<!-- saved from url=(0043)XScan.html -->
+<html class="no-js" lang="zh"><!--<![endif]--><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- remark: 制作逼真的雷达扫描动画代码演示_jQuery之家 -->
+	<title>HTML5 Canvas</title>
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+	<link rel="shortcut icon" href="http://www.htmleaf.com/favicon.ico">
+	<link rel="apple-touch-icon" href="http://www.htmleaf.com/templets/default/images/ico/apple-touch-icon.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="http://www.htmleaf.com/templets/default/images/ico/apple-touch-icon-72.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="http://www.htmleaf.com/templets/default/images/ico/apple-touch-icon-114.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="http://www.htmleaf.com/templets/default/images/ico/apple-touch-icon-144.png">
+	<link rel="stylesheet" type="text/css" href="./Canvas XScan_files/htmleaf-demo.min.css">
+	 
+	<!--[if lt IE 9]>
+      <script src="http://www.htmleaf.com/assets/js/html5shiv.min.js"></script>
+      <script src="http://www.htmleaf.com/assets/js/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body style="">
+	<div class="htmleaf-container">
+		<div class="htmleaf-container--header">
+			<div class="logo">
+				<a href="http://www.htmleaf.com/"><img src="./Canvas XScan_files/logo.svg" alt="jQuery之家"></a>
+			</div>
+			<h1>HTML5 Canvas 雷达扫描 </h1>
+			<div class="responsive">
+                    <a href="XScan.html#" class="desktop active" title="在桌面浏览器中预览"></a> 
+                    <a href="XScan.html#" class="tabletlandscape" title="平板Landscape模式 (1024x768)"></a> 
+                    <a href="XScan.html#" class="tabletportrait" title="平板Portrait模式 (768x1024)"></a> 
+                    <a href="XScan.html#" class="mobilelandscape" title="移动手机Landscape模式 (480x320)"></a>
+                    <a href="XScan.html#" class="mobileportrait" title="移动手机Portrait模式 (320x480)"></a>
+            </div>
+			<div class="actions">
+		          <div class="action">
+		            <a href="XScan.html" class="button button--empty" title="返回下载页"><i class="fa fa-leaf"></i></a>
+		          </div>
+		    </div>
+		</div>
+		<div class="htmleaf--main">
+			<div class="htmleaf-container--side mCustomScrollbar _mCS_1 mCS-autoHide mCS_no_scrollbar" style="position: relative; overflow: visible;"><div id="mCSB_1" class="mCustomScrollBox mCS-minimal mCSB_vertical mCSB_outside" tabindex="0"><div id="mCSB_1_container" class="mCSB_container mCS_y_hidden mCS_no_scrollbar_y" style="position: relative; left: 0px; top: 0px;" dir="ltr">
+				 
+				<!--相关插件-->
+				<div class="htmleaf-related">
+					<h2>相关插件</h2> 
+				</div>
+			</div></div><div id="mCSB_1_scrollbar_vertical" class="mCSB_scrollTools mCSB_1_scrollbar mCS-minimal mCSB_scrollTools_vertical" style="display: none;"><div class="mCSB_draggerContainer"><div id="mCSB_1_dragger_vertical" class="mCSB_dragger" style="position: absolute; min-height: 50px; height: 0px; top: 0px;" oncontextmenu="return false;"><div class="mCSB_dragger_bar" style="line-height: 50px;"></div></div><div class="mCSB_draggerRail"></div></div></div></div>
+			<div class="htmleaf-container--content">
+				<iframe src="./Canvas XScan_files/index.html" id="iframe" height="523px"></iframe>
+			</div>
+		</div>
+	</div>
+	<script src="./Canvas XScan_files/htmleaf-demo.min.js"></script>
+	<script type="text/javascript">
+		IS_IPAD=navigator.userAgent.match(/iPad/i)!=null;
+		var t={desktop:"100%",tabletlandscape:1040,tabletportrait:788,mobilelandscape:480,mobileportrait:340,placebo:0};
+		jQuery(".responsive a").on("click",function(){
+		var e=jQuery(this);
+		for(device in t){
+			if(e.hasClass(device)){
+				clicked=device;
+				jQuery("#iframe").width(t[device]);
+				if(clicked==device){
+					jQuery(".responsive a").removeClass("active");
+					e.addClass("active")}}}
+		return false});
+		if(IS_IPAD){
+			$("#iframe").css("padding-bottom","60px")
+		}
+	</script>
+	<script type="text/javascript">
+		$(".htmleaf-container--side").mCustomScrollbar({
+			theme:"minimal"
+		});
+	</script>
+
+</body></html>
