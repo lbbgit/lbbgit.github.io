@@ -55,11 +55,48 @@
         catch (e) {
             alert(e.message);
         }
-    }；
+    };
 	
 	this.writeLog = function (op, opName, sender) { }; //日志接口
     this.onLoadAfter = function () { }; //加载后接口
 	
+	
+	//learn config
+	this.SetCofigCols = function (arg) {
+        this.configCols = {};
+        if (arg && arg.length > 0) {
+            for (var i = 0, l = arg.length; i < l; i++) {
+                var fieldName = arg[i].fieldName;
+                if (fieldName) {
+                    this.configCols[fieldName] = arg[i];
+                }
+            }
+        }
+    };
+	
+	
+	this.runJsFile=function(jsUrl){
+		 $.ajax({
+                        type: "GET",
+                        url: "/getJs.ashx?href=" + jsUrl,
+                        dataType: "script",
+                        async: false,
+                        cache: true
+                    });
+	};
+	 
+    this.getResponse = function(xmlPath) { 
+        var listAtrDom = this.CreateXMLDOM();
+        //通过Ajax加载可以实现相关文件缓存
+        listAtrDom.loadXML($.ajax({
+            url: xmlPath ? xmlPath :"/Config/config1.xml",
+            async: false,
+            cache: true
+        }).responseText);
+		return listAtrDom;
+	};
+	this.CreateXMLDOM=function(){ };
+	this.CreateXMLDOM=f.CreateXMLDOM;
  }
  
  
@@ -71,6 +108,26 @@
 	a:function(str){alert(str)}
  }
  
+ 
+var Create = f.CreateXMLDOM = function () {
+    var xmlDoc = null;
+    try {
+        //Mozilla, Opera and webkit nightlies
+        if (document.implementation && document.implementation.createDocument) {
+            xmlDoc = document.implementation.createDocument("", "", null);
+        }
+        else {//IE
+            xmlDoc = new ActiveXObject("Microsoft.XMLDOM");
+        }
+        xmlDoc.async = false;
+        return xmlDoc;
+    }
+    catch (e) {
+           alert("浏览器无法创建XMLDOM对象,请把站点设置为受信站点并允许ActiveXObject执行。");
+        return null;
+    }
+}
+
  
  //init 
  var a=new pkg();
