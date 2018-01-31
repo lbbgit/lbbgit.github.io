@@ -1,5 +1,13 @@
 
  var pkg=function(sche){
+	 
+    this.DiyName; //名称
+    this.pageIndex = 1; 
+    this.maxCount = 200;
+    this.readOnly = false; //非只读
+    this.pageLoadingList = true; 
+    this.condition = ""; 
+   
 	this.AddBefore = function (fun, func) {//添加事件
         if (!this.AddBefore[fun]) {
             this.AddBefore[fun] = {};
@@ -20,9 +28,38 @@
         }
         return false;
     };
-	this.Authorize=function(fun, istrue, dataObject, args){
-		return true;
-	}
+	this.Authorize = function (fun, istrue, dataObject, args){ return true; }; 
+	this.Authorize = function (fun, aler) {
+        var defaultState = "ViewData,ViewNode"; //ViewData,DownData,ViewNode
+        if (this.readOnly && defaultState.indexOf(fun) == -1) {
+            return false;
+        }
+        return true;
+    };
+	
+	//OnOpClick('DownData','Category.DownData')
+	this.OnOpClick = function (fun, opClick, args) {
+        try {
+            if (!args) {
+                args = [];
+            }
+            if (this.RaiseBefore(fun, args)) {
+                if (args) {
+                    eval(opClick).apply(this, args);
+                }
+                else {
+                    eval(opClick).apply(this);
+                }
+            }
+        }
+        catch (e) {
+            alert(e.message);
+        }
+    }；
+	
+	this.writeLog = function (op, opName, sender) { }; //日志接口
+    this.onLoadAfter = function () { }; //加载后接口
+	
  }
  
  
