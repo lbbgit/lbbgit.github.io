@@ -1,7 +1,7 @@
-
+Ôªø
 # [<span class="octicon octicon-link"></span>](#awakeapp)Awake.app
 
-[÷–ŒƒΩÈ…‹](http://type.so/object-c/awake-app.html)
+[‰∏≠Êñá‰ªãÁªç](http://type.so/object-c/awake-app.html)
 
 [![screenshot](https://camo.githubusercontent.com/2bb97b776db20dbac366727cf21328d8f8a2c8bb/68747470733a2f2f7261772e6769746875622e636f6d2f7869616f7a692f4177616b652e6170702f6d61737465722f73637265656e73686f742e706e67)](https://camo.githubusercontent.com/2bb97b776db20dbac366727cf21328d8f8a2c8bb/68747470733a2f2f7261772e6769746875622e636f6d2f7869616f7a692f4177616b652e6170702f6d61737465722f73637265656e73686f742e706e67)
 
