@@ -1,17 +1,12 @@
 <ul>
- start
  <li>b1</li>
  <li>b2</li>
  <li>b3</li>
  <li>b4
   <ul>
-  us
   <li>1</li>
   <li>2</li>
   <li>3</li>
-  ue
   </ul>
  </li>
-
- end 
 </ul>

@@ -12,53 +12,49 @@
   <link rel="stylesheet" href="css/style.css" media="screen" type="text/css" />
 
   <script src="js/jquery-3.0.0.min.js"></script>
-  
+  <script src="js/Login.js"></script>
+
+<style>
+.loginDiv
+{
+  width:200px;
+  height:120px;
+}
+.bkPic
+{
+	background-image:url('bk.png') 100% 100%;
+}
+.grad1 {
+    //height: 200px;
+    background: -webkit-linear-gradient(left, red , blue); /* Safari 5.1 - 6.0 */
+    background: -o-linear-gradient(right, red, blue); /* Opera 11.1 - 12.0 */
+    background: -moz-linear-gradient(right, red, blue); /* Firefox 3.6 - 15 */
+    background: linear-gradient(to right, red , blue); /* 标准的语法（必须放在最后） */
+}
+</style>  
 </head>
-
 <body>
-<div style="text-align:center;clear:both;"> 
-</div>
-  <div class="widget">
-  <ol class="widget-list" id="managers">
-    <li>
-      <a class="widget-list-link">
-        <img src="http://www.gravatar.com/avatar/47?f=y&amp;s=64&amp;d=identicon">
-        Manager #1 <span>481 followers</span>
-      </a>
-    </li>
-    <li>
-      <a class="widget-list-link">
-        <img src="http://www.gravatar.com/avatar/47?f=y&amp;s=64&amp;d=identicon">
-        Manager #2 <span>5162 followers</span>
-      </a>
-    </li>
-     
-  </ol>
- 
-  <ol class="widget-list" id="developers">
-    <li>
-      <a class="widget-list-link">
-        <img src="http://www.gravatar.com/avatar/6?f=y&amp;s=64&amp;d=identicon">
-        Developer #1 <span>481 followers</span>
-      </a>
-    </li>
-    <li>
-      <a class="widget-list-link">
-        <img src="http://www.gravatar.com/avatar/6?f=y&amp;s=64&amp;d=identicon">
-        Developer #2 <span>5162 followers</span>
-      </a>
-    </li>
-    <li>
-      <a class="widget-list-link">
-        <img src="http://www.gravatar.com/avatar/6?f=y&amp;s=64&amp;d=identicon">
-        Developer #3 <span>342 followers</span>
-      </a>
-    </li>
-  </ol>
 
- 
-</div>
+<div style="text-align:center;clear:both;" class="bkPic grad1">
+	<center>
+		<div class="loginDiv">
+			<table>
+			   <tr>
+				<td>用户名</td>
+				<td><input id="user" type="text"></td>
+			   </tr>
+			    <tr>
+				<td>密  码</td>
+				<td><input id="pass" type="pass"></td>
+			   </tr>
+			    <tr>
+				<td><input id="ok" type="button" value='登  录'></td>
+				<td><input id="lost" type="button" value='找  回'></td>
+			   </tr>
+			</table>
+		</div>
+	</center> 
+</div>   
 
 </body>
-
 </html>
