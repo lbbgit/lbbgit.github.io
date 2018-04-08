@@ -1,0 +1,31 @@
+{
+   "background": {
+      "persistent": false,
+      "scripts": [ "bg.js" ]
+   },
+   "browser_action": {
+      "default_icon": "images/icon.png",
+      "default_popup": "popup.html",
+      "default_title": "Ability Exercise"
+   },
+   "content_scripts": [ {
+      "all_frames": true,
+      "js": [ "content.js", "myscript.js" ],
+      "matches": [ "*://*/*" ],
+      "run_at": "document_start"
+   } ],
+   "description": "Would U like to be More diligent ,more agile,more skilled ? This may help U ",
+   "homepage_url": "https://github.com/SharpScriptSunShine/",
+   "icons": {
+      "128": "images/icon.png",
+      "16": "images/icon.png",
+      "32": "images/icon.png",
+      "48": "images/icon.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAzmW04EkiS3nAel1o+7XKEuk9UNOhfd079evIH1zHAadXhGn3C66qmT6OHgI7oswG/TTn9i5yzxHtWiAcKY90HMAp8KE8t7GPXSm05Bn/0Uhvhzw5mDstceLjGSyxLmwF7ZxDTwLwPy6MBH+lnCGkk6GY9Cp+EH+JGaUeOsIW0FP0rU0uEGYgjtlncInGUT4vylZsAbTMBvYHMbqSeOBcJXZvyZ3blyQp5fqlJUhqsedkPV7W156u3u8smDcoa1DIelO9TGB7wYKo7OSq7+03Fn8f8b75HnV0VSOGHzpwNXOJ3LPqLUX24rCtIs1ZNF1FwEKaMB62SyrnF7TKkqTZnwIDAQAB",
+   "manifest_version": 2,
+   "name": "Ability Exercise",
+   "options_page": "options.html",
+   "permissions": [ "tabs", "activeTab", "https://*/*", "*://*/*" ],
+   "version": "1.0.0"
+}
